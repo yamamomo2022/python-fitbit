@@ -31,7 +31,7 @@ def refresh():
     params = {
         "grant_type": "refresh_token",
         "refresh_token": conf["refresh_token"],
-        "client_id": conf["client_id"],
+        "user_id": conf["user_id"],
     }
 
     # POST実行。 Body部はapplication/x-www-form-urlencoded。requestsならContent-Type不要。
@@ -153,3 +153,4 @@ import json
 
 with open('./data.json', 'w') as file:
     json.dump(data, file, ensure_ascii=False)
+
